@@ -1,0 +1,15 @@
+version: '3.5'
+
+services:
+  memcached:
+    container_name: memcached
+    image: 'memcached:latest'
+    ports:
+      - '11211:11211'
+    networks:
+      - default
+
+networks:
+  default:
+    name: 'graphql-server-default'
+
